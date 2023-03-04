@@ -2,6 +2,7 @@ import time
 import csv
 from TM import *
 from build import *
+import random
 
 if __name__ == "__main__":
     
@@ -12,9 +13,11 @@ if __name__ == "__main__":
     print('\t*\tLas graficas se muestran en el archivo empirical_analysis.ipynb')
     print('\t*\tPara obtener un nuevo valor ejecutar proyecto1.py nuevamente y cambiar el valor n\n')
 
-    veri = True
-    while(veri):
-        num = input('Numero de Fibonacci que desea calcular: ')
+    veri = 0
+    while(veri<300):
+        veri +=1
+        # num = input('Numero de Fibonacci que desea calcular: ')
+        num = random.randint(1,17)
         if num == 'exit' or num == 0:
             veri = False
             print("\nGracias por utilizar este programa\n")
