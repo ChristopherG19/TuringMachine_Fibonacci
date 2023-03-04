@@ -57,3 +57,10 @@ Descripción de convenciones elegidas:
 ![output](https://user-images.githubusercontent.com/60373842/222864712-46f29428-c3bc-426c-a77e-2128a2a6833f.jpg)
 
 ## Análisis empírico
+a. Listado de entradas de prueba usadas para medir tiempos de ejecución de la máquina. 
+- Para esto se creó un archivo .csv (time_value.csv) donde se almacenan los input ingresados y el tiempo de la ejecución con dicho input. Algunos de los valores ingresados fueron: 1,2,3,4,...,15,...
+- Se realizaron pruebas de manera automática para obtener una cantidad considerable de datos que permitieran realizar un análisis empírico relevante. En un principio trabajamos con 300 pruebas de diferentes valores y tiempos de ejecución.
+b. Diagrama de dispersión que muestre los tiempos de ejecución de la máquina en función de su tamaño de entrada. <br>
+![image](https://user-images.githubusercontent.com/60373842/222868984-eb670105-aee4-40e8-9b6b-8ee3ac183cf1.png)
+c. Regresión polinomial que se ajuste mejor a los datos.<br>
+![image](https://user-images.githubusercontent.com/60373842/222869088-faf502f5-a2ff-4927-b498-bfb56b0d8949.png)
