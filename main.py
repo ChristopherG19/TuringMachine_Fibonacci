@@ -1,3 +1,5 @@
+import time
+import csv
 from TM import *
 from build import *
 
@@ -13,12 +15,23 @@ if __name__ == "__main__":
     veri = True
     while(veri):
         num = input('Numero de Fibonacci que desea calcular: ')
-        if(num == 'exit'):
+        if num == 'exit' or num == 0:
             veri = False
             print("\nGracias por utilizar este programa\n")
         else:
+            #Time and result
+            start_time = time.time()
+            
             if (int(num) < 0):
                 num = int(-num)
             input_cinta = leerCinta(int(num))
             maquina = buildTM(input_cinta)
             print("Resultado: ", maquina.fibonacci().count('1'))
+            
+            #Time and registration
+            end_time = time.time()
+            execution_time = end_time - start_time
+            print("El tiempo de ejecución fue:", execution_time, "segundos\n")
+            with open('time_value.csv', mode='a', newline='') as csv_file:
+                writer = csv.writer(csv_file)
+                writer.writerow([num, execution_time])
